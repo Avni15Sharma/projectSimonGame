@@ -96,6 +96,7 @@ function check(){
         reset()
     }
     if(player_inp.length==turn && good && !win){
+        result.innerText=`Score: ${turn}`
         turn++
         player_inp=[]
         comp_turn=true
@@ -155,4 +156,5 @@ closeWinPopup.addEventListener("click", () => {
 closeLosePopup.addEventListener("click", () => {
     losePopup.close();
 });
+const result=document.getElementById("result")
 
